@@ -15,11 +15,11 @@ def main():
     parser = OptionParser(usage="usage: %prog [options], version=%prog 1.0")
 
     parser.add_option("-s", "--source", action="store", type="string", dest="source_pcap_path", default=False,
-                      help="Path to the pacap file  ")
+                      help="Path to the PCAP file  ")
 
     parser.add_option("-d", "--destination", action="store", type="string", dest="destination_filtered_path",
                       default=False,
-                      help="Destination path to save the filtered MACs")
+                      help="Destination path to save the filtered BSSIDs")
 
     (options, args) = parser.parse_args()
     if len(vars(options)) != 2 or not options.source_pcap_path or not options.destination_filtered_path:
@@ -45,6 +45,4 @@ def main():
             f.write(bssid + "\n")  # Writing
 
     print("Done ...\n")
-
-
 main()
