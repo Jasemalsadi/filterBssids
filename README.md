@@ -1,4 +1,4 @@
-# mergeVideos
+# Filter BSSIDs
 Filter unique BBSIDs that leak TCP or UDP traffic. 
 ## Prerequisites
 ```
